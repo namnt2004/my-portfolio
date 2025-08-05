@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Truong Nam - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .section-divider {
+            border-top: 1px solid #1e293b;
+        }
+        .section {
+            min-height: 100vh;
+            padding: 4rem 0;
+        }
+        .content-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+        }
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .experience-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: -0.25rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #22d3ee;
+            border-radius: 50%;
+            border: 4px solid #0f172a;
+        }
+        .timeline {
+            position: relative;
+            margin-left: 0.5rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 2px;
+            background-color: #1e293b;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur-lg border-b border-slate-800">
+        <div class="content-container">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors">Nguyen Truong Nam</a>
+                <nav class="hidden md:flex gap-6">
+                    <a href="#about" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
+                    <a href="#experience" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">Experience</a>
+                    <a href="#education" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors">Education</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section bg-slate-900">
+        <div class="content-container">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <span class="text-cyan-400 font-semibold">Backend Developer</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-2 mb-4">Nguyen Truong Nam</h1>
+                    <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0">
+                        Aspiring developer passionate about building efficient systems and innovative solutions.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start gap-4">
+                        <a href="mailto:nn4689943@gmail.com" class="inline-flex items-center gap-2 bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            Contact Me
+                        </a>
+                        <a href="#experience" class="inline-flex items-center gap-2 bg-slate-800 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-700 transition-all">
+                            My Work
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ring-4 ring-slate-800 ring-offset-4 ring-offset-slate-900">
+                        <img src="img/image.png" alt="Nguyen Truong Nam" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">My Ambitions</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="bg-slate-800/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">Short-Term Goal</h3>
+                    <p class="text-slate-400">I am currently focused on expanding my expertise in modern web technologies, specifically REST APIs, TypeScript, and Next.js. My goal is to build practical, full-stack applications while strengthening my foundational skills in Django.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3">Long-Term Goal</h3>
+                    <p class="text-slate-400">In the long run, I aspire to become a lead software developer, specializing in building scalable and efficient systems. I aim to lead a team of developers, contribute to innovative tech solutions, and eventually transition into a technical architect role where I can design cutting-edge software infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">Technical Skills & Frameworks</h2>
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-slate-300 mb-6 text-center">Core Competencies</h3>
+                <div class="skills-grid">
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="font-semibold text-sm text-slate-300">Java</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="font-semibold text-sm text-slate-300">C#</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="font-semibold text-sm text-slate-300">Python</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                        <span class="font-semibold text-sm text-slate-300">.NET</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">Git</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">Team Collaboration</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><path d="M19.439 7.852c-2.143-2.143-5.63-2.143-7.772 0L9.43 10.08a1 1 0 0 1-1.414-1.414l2.233-2.233a3.5 3.5 0 0 0-4.95-4.95l-2.233 2.233a3.5 3.5 0 0 0 0 4.95 3.5 3.5 0 0 0 4.95 0l2.232-2.232a1 1 0 0 1 1.414 1.414l-2.233 2.233a3.5 3.5 0 0 0 4.95 4.95l2.233-2.233a3.5 3.5 0 0 0 0-4.95 3.5 3.5 0 0 0-4.95 0Z"></path><path d="M12.727 12.727a1 1 0 0 0-1.414 0l-2.233 2.233a3.5 3.5 0 0 1-4.95-4.95l2.233-2.233a3.5 3.5 0 0 1 4.95 0l2.233 2.233a1 1 0 0 0 1.414-1.414l-2.233-2.233a3.5 3.5 0 0 0-4.95 4.95l-2.233 2.233a3.5 3.5 0 0 0 4.95 4.95l2.233-2.233a1 1 0 0 0 0-1.414Z"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">Problem Solving</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">SQL Server</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">MySQL</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">SQLite</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+                        <span class="font-semibold text-sm text-slate-300">English</span>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-300 mt-16 mb-6 text-center">Currently Exploring</h3>
+                <div class="skills-grid">
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                        <span class="font-semibold text-sm text-slate-300">REST APIs</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="font-semibold text-sm text-slate-300">TypeScript</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <span class="font-semibold text-sm text-slate-300">Next.js</span>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-cyan-400"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                        <span class="font-semibold text-sm text-slate-300">Django</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">Programming Experience</h2>
+            <div class="max-w-3xl mx-auto space-y-12 relative timeline">
+                <div class="experience-item">
+                    <p class="text-sm font-semibold text-cyan-400 mb-1">May 2025 - Sep 2025</p>
+                    <h3 class="text-xl font-bold text-slate-100">E-Commerce Store (Project in progress)</h3>
+                    <p class="text-md font-medium text-slate-400 mb-3">Sole Developer (Team of 1)</p>
+                    <p class="text-slate-400 mb-4">A fully functional online shopping platform built with Django. The application allows users to browse products, manage shopping carts, place orders, and make secure payments via PayPal. Key features include a dynamic product catalog with filtering, user authentication, an admin dashboard, and deployment on AWS/Render with S3 for image storage.</p>
+                    <a href="https://github.com/namnt2004/e-commerce.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        View on GitHub
+                    </a>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Django</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">PayPal API</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">AWS</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Render</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Amazon S3</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">HTML</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">CSS</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <p class="text-sm font-semibold text-cyan-400 mb-1">Feb 2025 - May 2025</p>
+                    <h3 class="text-xl font-bold text-slate-100">Student Management System</h3>
+                    <p class="text-md font-medium text-slate-400 mb-3">Member (Team of 5)</p>
+                    <p class="text-slate-400 mb-4">Built a student management website using Bootstrap, C#, and ASP.NET. Utilized SQL for data storage, applied SOLID principles to the project architecture, and used GitHub for version control.</p>
+                    <a href="https://github.com/namnt2004/asm_project_apdp.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                        View on GitHub
+                    </a>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Bootstrap</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">C#</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">ASP.NET</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">SOLID</span>
+                        <span class="bg-slate-700 text-cyan-300 text-xs font-semibold px-2.5 py-1 rounded-full">Github</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">Education</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-slate-800/50 p-6 rounded-lg flex items-start gap-4">
+                    <div class="text-cyan-400 pt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 1.66 3.13 3 6 3s6-1.34 6-3v-5"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-cyan-400">Aug 2022 - Sep 2025</p>
+                        <h3 class="text-xl font-bold text-slate-100">Information Technology - Software Engineer</h3>
+                        <p class="text-md font-medium text-slate-400">BTEC FPT International College</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Activities Section -->
+    <section id="certs" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">Certifications & Activities</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-6 text-center">Certifications</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                            <div>
+                                <p class="font-semibold text-slate-200">Java Basics for Beginners: Learn Coding with Java</p>
+                                <p class="text-xs text-slate-400">Jan 2024</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                            <div>
+                                <p class="font-semibold text-slate-200">Business Process Support</p>
+                                <p class="text-xs text-slate-400">Aug 2024</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                            <div>
+                                <p class="font-semibold text-slate-200">CompTIA Security+ (SY0-701) Complete Course & Exam</p>
+                                <p class="text-xs text-slate-400">Jul 2024</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-6 text-center">Activities</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-cyan-400 flex-shrink-0"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <p class="font-semibold text-slate-200">Joined the School Hackathon</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section section-divider">
+        <div class="content-container">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-200 sm:text-4xl mb-12 text-center">Hobbies</h2>
+            <div class="flex justify-center flex-wrap gap-4 max-w-2xl mx-auto">
+                <div class="bg-slate-800 py-3 px-6 rounded-full flex items-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-400"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                    <span class="font-semibold text-slate-300">Coding Challenges</span>
+                </div>
+                <div class="bg-slate-800 py-3 px-6 rounded-full flex items-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-400"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    <span class="font-semibold text-slate-300">Reading Books</span>
+                </div>
+                <div class="bg-slate-800 py-3 px-6 rounded-full flex items-center gap-3 text-center hover:bg-slate-700/70 transition-colors cursor-pointer hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-400"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                    <span class="font-semibold text-slate-300">Learning New Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-8">
+        <div class="content-container text-center text-slate-400">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://github.com/namnt2004" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Nguyen Truong Nam. All rights reserved.</p>
+            <p class="text-sm mt-1">Built with HTML, Tailwind CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
